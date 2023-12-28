@@ -105,6 +105,7 @@ body {
 .todos {
     margin-top: 245px;
     padding: 10px;
+    overflow: auto;
 }
 
 .red {
