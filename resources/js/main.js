@@ -8,13 +8,16 @@ let todos = document.querySelector('.todos');
 
 let favToggle = document.querySelector('.favourites-toggle');
 
-let todolist = [];
+// let todolist = [];
+let todolist = localStorage.getItem("todolist") ? JSON.parse(localStorage.getItem("todolist")) : [];
+showAllTodos()
 
 todoField.addEventListener("keypress", (event) => {
     if (event.key === "Enter") {
         addTodo();
     }
 });
+
 
 var elem = document.querySelector('.favourites-toggle');
 var init = new Switchery(elem);
@@ -32,6 +35,8 @@ function addTodo() {
 
     let lastTodo = todos.firstChild;
 
+    localStorage.setItem("todolist", JSON.stringify(todolist)); 
+
     todos.insertBefore(createTodoElement(new_todo), lastTodo);
     todoField.value = "";
 }
@@ -45,7 +50,6 @@ function deleteTodo(event) {
     setTimeout(()=> {todo.remove()}, 500);
 
     removeTodoFromList(todo_id);
-    // console.log(todolist);
 }
 
 
@@ -55,6 +59,7 @@ function removeTodoFromList(_id) {
             todolist.splice(index, 1);
         }
     });
+    localStorage.setItem("todolist", JSON.stringify(todolist)); 
 }
 
 function switchLikeCheckbox(e) {
@@ -86,6 +91,7 @@ function toggleLike(event) {
         like_button.style.background = 'white';
         like_button.textContent = '❤️';
     }
+    localStorage.setItem("todolist", JSON.stringify(todolist)); 
     // console.log(todolist);
 }
 
