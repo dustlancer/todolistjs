@@ -11,23 +11,25 @@
 
 </head>
 <body>
-    <div class="header">
-        <h1>Туду лист</h1>
-
-        <div class="input-group">
-            <label for="todoField">Новая заметка: </label>
-            <input type="text" id="todoField" class="todoField" />
-            <input type="submit" value="Добавить" onclick="addTodo()" class="todoSubmit" />
+    <div class="wrapper">
+        <div class="header">
+            <h1>Туду лист</h1>
+    
+            <div class="input-group">
+                <label for="todoField">Новая заметка: </label>
+                <input type="text" id="todoField" class="todoField" />
+                <input type="submit" value="Добавить" onclick="addTodo()" class="todoSubmit" />
+            </div>
+            
+            <div class="options container-fluid">
+                <input type="checkbox" class="favourites-toggle" onchange="toggleFavourites()">
+                <p>Только избранные</p>
+            </div>
+    
         </div>
-        
-        <div class="options">
-            <input type="checkbox" class="favourites-toggle" onchange="toggleFavourites()">
-            <p>Только избранные</p>
+        <div class="todos">
+    
         </div>
-
-    </div>
-    <div class="todos">
-
     </div>
 
     <script src="resources/js/switchery/switchery.js"></script>
