@@ -1,5 +1,6 @@
 // 'use strict';
 
+const SCREEN_WIDTH = window.innerWidth;
 
 let todoField = document.querySelector('.todoField');
 let todoSubmit = document.querySelector('.todoSubmit');
@@ -97,6 +98,7 @@ function createTodoElement(todo) {
     const todo_text = document.createElement("p");
     todo_text.classList.add('todo-text');
     todo_text.textContent = todo.text;
+    todo_text.addEventListener("click", () => {showFullTextOnMobile(todo.text)});
 
     const todo_options = document.createElement("div");
     todo_options.classList.add("todo-options");
@@ -193,5 +195,13 @@ function toggleFavourites() {
                     alert(error);
                 }
             )
+    }
+}
+
+function showFullTextOnMobile(text) {
+    if (SCREEN_WIDTH > 800) {
+        return;
+    } else {
+        alert(text);
     }
 }

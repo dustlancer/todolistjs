@@ -46,6 +46,14 @@ body {
     padding: 5px;
 }
 
+.todo-text {
+    white-space: nowrap; /* Текст не переносится */
+    overflow: hidden; /* Обрезаем всё за пределами блока */
+    text-overflow: ellipsis;
+    margin-right: 10px;
+}
+
+
 .todoSubmit {
     margin-top: 15px;
     min-height: 30px;
@@ -65,7 +73,16 @@ body {
     justify-content: center;
 }
 
-
+@media only screen and (max-width: 768px) {
+    .todoField {
+        width: 90%;
+    }
+    .todoSubmit {
+        width: 70%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+  }
 
 
 
