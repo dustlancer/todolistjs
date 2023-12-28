@@ -1,0 +1,164 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.header {
+
+    padding: 15px;
+
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid lightgray;
+    text-align: center;
+
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.todoField {
+    margin-top: 10px;
+    width: 70%;
+    border-radius: 5px;
+    border-width: 0;
+    border: 2px solid lightgray;
+    padding: 5px;
+}
+
+.todoSubmit {
+    margin-top: 15px;
+    min-height: 30px;
+    width: 50%;
+    border-radius: 5px;
+    border-width: 0;
+    border: 1px solid lightgray;
+    background: white;
+}
+
+.options {
+    margin-top: 15px;
+    gap: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+
+
+
+/* ------------------------------- */
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0.9;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+}
+
+
+.fade-in {
+    animation: fadeIn .3s ease-in;
+    animation-fill-mode: forwards;  
+}
+
+.fade-out {
+    animation: fadeOut .3s ease-in;
+    animation-fill-mode: forwards;  
+}
+
+.todo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    padding: 10px;
+    padding-right: 15px;
+    border: 2px solid lightgray;
+    border-radius: 15px;
+    margin-bottom: 10px;    
+}
+
+.todos {
+    padding: 10px;
+}
+
+.red {
+    background: red;
+}
+
+.todo-text {
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+.todo-options {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.delete-button {
+    padding: 10px;
+    border-radius: 5px;
+    height: 50px;
+    background: lightcoral;
+
+    background-color: #fff;
+    border-width: 0;
+    border-radius: 5px;
+    border: 1px solid black;
+    transition: 0.3s;
+}
+
+.like-button {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: auto;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    background-color: #fff;
+    color: red;
+    border-width: 0;
+    border-radius: 5px;
+    border: 1px solid rgb(221, 53, 53);
+    transition: 0.3s;
+}
+
+.like-button-active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: auto;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    background-color: red;
+    color: white;
+    border-width: 0;
+    border-radius: 5px;
+    border: 1px solid rgb(221, 53, 53);
+    transition: 0.3s;
+}
+

@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="resources/css/reset.css">
+    <link rel="stylesheet" href="resources/css/style.css">
+    <link rel="stylesheet" href="resources/css/switchery/switchery.css" />
+
+</head>
+<body>
+    <div class="header">
+        <h1>Туду лист</h1>
+
+        <div class="input-group">
+            <label for="todoField">Новая заметка: </label>
+            <input type="text" id="todoField" class="todoField" />
+            <input type="submit" value="Добавить" onclick="addTodo()" class="todoSubmit" />
+        </div>
+        
+        <div class="options">
+            <input type="checkbox" class="favourites-toggle" onchange="toggleFavourites()">
+            <p>Только избранные</p>
+        </div>
+
+    </div>
+    <div class="todos">
+
+    </div>
+
+    <script src="/resources/js/switchery/switchery.js"></script>
+    <script src="/resources/js/main.js"></script>
+</body>
+
+</html>
