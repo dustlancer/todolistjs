@@ -1,3 +1,5 @@
+html, body {margin: 0; height: 100%; overflow: hidden}
+
 body {
     font-family: 'Roboto', sans-serif;
 }
@@ -5,7 +7,9 @@ body {
 .header {
 
     padding: 15px;
-
+    position: fixed;
+    top: 0;
+    width: 100%;
     display: flex;
     flex-direction: column;
     border-bottom: 1px solid lightgray;
@@ -99,6 +103,7 @@ body {
 }
 
 .todos {
+    margin-top: 245px;
     padding: 10px;
 }
 
